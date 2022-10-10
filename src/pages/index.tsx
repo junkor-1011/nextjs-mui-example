@@ -34,7 +34,9 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing <code className={styles.code}>pages/index.tsx</code>
+          <span css={css({ color: 'orange' })}>
+            Get started by editing <code className={styles.code}>pages/index.tsx</code>
+          </span>
         </p>
 
         <div className={styles.grid}>

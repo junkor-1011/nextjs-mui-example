@@ -420,6 +420,10 @@ exports[`Storyshots Pages/Home Home Page 1`] = `
 }
 
 .emotion-1 {
+  color: orange;
+}
+
+.emotion-2 {
   color: green;
   font-weight: bold;
 }
@@ -447,12 +451,16 @@ exports[`Storyshots Pages/Home Home Page 1`] = `
     <p
       class="description"
     >
-      Get started by editing 
-      <code
-        class="code"
+      <span
+        class="emotion-1"
       >
-        pages/index.tsx
-      </code>
+        Get started by editing 
+        <code
+          class="code"
+        >
+          pages/index.tsx
+        </code>
+      </span>
     </p>
     <div
       class="grid"
@@ -503,7 +511,7 @@ exports[`Storyshots Pages/Home Home Page 1`] = `
       </a>
     </div>
     <span
-      class="emotion-1"
+      class="emotion-2"
     >
       <span>
         2020/9/13 21:26:40
