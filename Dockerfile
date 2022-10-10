@@ -1,18 +1,20 @@
 FROM node:18-bullseye-slim as node
-ENV YARN_VERSION=1.22.19
+# ENV YARN_VERSION=1.22.19
+ENV PNPM_VERSION=7.13.2
 RUN npm uninstall --global yarn && \
     corepack disable && \
-    corepack enable yarn && \
-    corepack prepare yarn@${YARN_VERSION} --activate
+    corepack enable pnpm && \
+    corepack prepare pnpm@${PNPM_VERSION} --activate
 COPY --chown=node:node . /app
 USER node
 WORKDIR /app
 RUN find -type f -regextype sed -regex ".*\.\(test\|spec\|stories\)\.\(ts\|tsx\)" -delete && \
     find -type f -regextype sed -regex ".*\.snap" -delete
-RUN yarn install --ignore-scripts && \
-    yarn build && \
-    yarn install --production --ignore-scripts && \
-    yarn cache clean
+RUN pnpm install --ignore-scripts && \
+    pnpm build && \
+    pnpm install -P --ignore-scripts
+    # pnpm install --production --ignore-scripts && \
+    # pnpm cache clean
 
 FROM ubuntu:jammy as base
 
