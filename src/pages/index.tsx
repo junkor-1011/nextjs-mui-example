@@ -1,7 +1,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+import Clock from '@/components/atoms/Clock';
 import styles from '../styles/Home.module.scss';
+
+const ClockStyle = styled.span({
+  color: 'green',
+  fontWeight: 'bold',
+});
 
 // eslint-disable-next-line arrow-body-style
 const Home: NextPage = () => {
@@ -15,7 +23,14 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <span
+            css={css`
+              color: red;
+              font-weight: bold;
+            `}
+          >
+            Welcome to <a href="https://nextjs.org">Next.js!</a>
+          </span>
         </h1>
 
         <p className={styles.description}>
@@ -46,6 +61,9 @@ const Home: NextPage = () => {
             <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
           </a>
         </div>
+        <ClockStyle>
+          <Clock />
+        </ClockStyle>
       </main>
 
       <footer className={styles.footer}>
