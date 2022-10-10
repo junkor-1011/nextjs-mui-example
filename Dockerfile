@@ -1,6 +1,6 @@
 FROM node:18-bullseye-slim as node
 # ENV YARN_VERSION=1.22.19
-ENV PNPM_VERSION=7.13.2
+ENV PNPM_VERSION=7.13.3
 RUN npm uninstall --global yarn && \
     corepack disable && \
     corepack enable pnpm && \
