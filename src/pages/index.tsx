@@ -1,15 +1,21 @@
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import Clock from '@/components/atoms/Clock';
 import styles from '../styles/Home.module.scss';
 
-const ClockStyle = styled.span({
-  color: 'green',
-  fontWeight: 'bold',
-});
+const StyleSample = styled.span`
+  color: gray;
+  :hover,
+  :focus,
+  :active {
+    border-color: #0070f3;
+    color: #0070f3;
+    font-weight: bold;
+  }
+`;
 
 // eslint-disable-next-line arrow-body-style
 const Home: NextPage = () => {
@@ -63,9 +69,23 @@ const Home: NextPage = () => {
             <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
           </a>
         </div>
-        <ClockStyle>
-          <Clock />
-        </ClockStyle>
+        <br />
+        <ul>
+          <li>
+            <Link href="/plane-sample">
+              <a>
+                <StyleSample>plane sample(without css framework)</StyleSample>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/mui-sample">
+              <a>
+                <StyleSample>mui sample</StyleSample>
+              </a>
+            </Link>
+          </li>
+        </ul>
       </main>
 
       <footer className={styles.footer}>

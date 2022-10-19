@@ -424,7 +424,14 @@ exports[`Storyshots Pages/Home Home Page 1`] = `
 }
 
 .emotion-2 {
-  color: green;
+  color: gray;
+}
+
+.emotion-2:hover,
+.emotion-2:focus,
+.emotion-2:active {
+  border-color: #0070f3;
+  color: #0070f3;
   font-weight: bold;
 }
 
@@ -510,13 +517,31 @@ exports[`Storyshots Pages/Home Home Page 1`] = `
         </p>
       </a>
     </div>
-    <span
-      class="emotion-2"
-    >
-      <span>
-        2020/9/13 21:26:40
-      </span>
-    </span>
+    <br />
+    <ul>
+      <li>
+        <a
+          href="/plane-sample"
+        >
+          <span
+            class="emotion-2"
+          >
+            plane sample(without css framework)
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/mui-sample"
+        >
+          <span
+            class="emotion-2"
+          >
+            mui sample
+          </span>
+        </a>
+      </li>
+    </ul>
   </main>
   <footer
     class="footer"
