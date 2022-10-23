@@ -2,7 +2,7 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "pnpm install --ignore-script"
+      "command": "pnpm install --ignore-scripts"
     },
     {
       "name": "build",
