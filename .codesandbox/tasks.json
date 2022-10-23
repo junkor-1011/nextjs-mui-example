@@ -13,7 +13,7 @@
     "dev": {
       "name": "dev",
       "command": "pnpm dev",
-      "runAtStart": false
+      "runAtStart": true
     },
     "build": {
       "name": "build",
@@ -22,8 +22,8 @@
     },
     "start": {
       "name": "start",
-      "command": "pnpm start",
-      "runAtStart": true
+      "command": "pnpm start -p 3001",
+      "runAtStart": false
     },
     "lint": {
       "name": "lint",
