@@ -3,6 +3,10 @@
     {
       "name": "Install Dependencies",
       "command": "pnpm install --ignore-script"
+    },
+    {
+      "name": "build",
+      "command": "pnpm build"
     }
   ],
   "tasks": {
@@ -19,7 +23,7 @@
     "start": {
       "name": "start",
       "command": "pnpm start",
-      "runAtStart": false
+      "runAtStart": true
     },
     "lint": {
       "name": "lint",
@@ -29,7 +33,7 @@
     "build:launch": {
       "name": "build:launch",
       "command": "pnpm build && pnpm start",
-      "runAtStart": true
+      "runAtStart": false
     }
   }
 }
