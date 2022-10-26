@@ -73,16 +73,12 @@ const Home: NextPage = () => {
         <ul>
           <li>
             <Link href="/plane-sample">
-              <a>
-                <StyleSample>plane sample(without css framework)</StyleSample>
-              </a>
+              <StyleSample>plane sample(without css framework)</StyleSample>
             </Link>
           </li>
           <li>
             <Link href="/mui-sample">
-              <a>
-                <StyleSample>mui sample</StyleSample>
-              </a>
+              <StyleSample>mui sample</StyleSample>
             </Link>
           </li>
         </ul>
