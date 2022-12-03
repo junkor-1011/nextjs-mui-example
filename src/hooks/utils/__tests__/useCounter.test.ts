@@ -1,10 +1,10 @@
 import { renderHook, act } from '@testing-library/react';
 import useCounter from '../useCounter';
 
-test('should increment counter', () => {
+test('should increment counter', async () => {
   const { result } = renderHook(() => useCounter());
 
-  act(() => {
+  await act(() => {
     result.current.increment();
   });
 

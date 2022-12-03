@@ -22,25 +22,25 @@ describe('useDateNow', () => {
     const { result } = renderHook(() => useDateNow());
     expect(result.current.getTime()).toBe(dummyTime);
   });
-  it('clock', () => {
+  it('clock', async () => {
     const { result } = renderHook(() => useDateNow());
 
-    act(() => {
+    await act(() => {
       jest.advanceTimersByTime(500);
     });
     expect(result.current.getTime()).toBe(dummyTime);
 
-    act(() => {
+    await act(() => {
       jest.advanceTimersByTime(500);
     });
     expect(result.current.getTime()).toBe(dummyTime + 1000);
 
-    act(() => {
+    await act(() => {
       jest.advanceTimersByTime(9000);
     });
     expect(result.current.getTime()).toBe(dummyTime + 10000);
 
-    act(() => {
+    await act(() => {
       jest.advanceTimersByTime(500);
     });
     expect(result.current.getTime()).toBe(dummyTime + 10000);

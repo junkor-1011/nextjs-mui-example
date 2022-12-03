@@ -18,35 +18,35 @@ describe('Clock', () => {
     jest.useRealTimers();
     cleanup();
   });
-  it('Locale', () => {
+  it('Locale', async () => {
     render(<Clock />);
 
     expect(screen.getByText(new Date(dummyTime).toLocaleString())).toBeInTheDocument();
 
-    act(() => {
+    await act(() => {
       jest.advanceTimersByTime(1000);
     });
 
     expect(screen.getByText(new Date(dummyTime + 1000).toLocaleString())).toBeInTheDocument();
 
-    act(() => {
+    await act(() => {
       jest.advanceTimersByTime(500);
     });
 
     expect(screen.getByText(new Date(dummyTime + 1000).toLocaleString())).toBeInTheDocument();
   });
-  it('UTC ISOFormat', () => {
+  it('UTC ISOFormat', async () => {
     render(<Clock useLocale={false} />);
 
     expect(screen.getByText(new Date(dummyTime).toISOString())).toBeInTheDocument();
 
-    act(() => {
+    await act(() => {
       jest.advanceTimersByTime(1000);
     });
 
     expect(screen.getByText(new Date(dummyTime + 1000).toISOString())).toBeInTheDocument();
 
-    act(() => {
+    await act(() => {
       jest.advanceTimersByTime(500);
     });
 
