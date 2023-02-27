@@ -5,5 +5,7 @@
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
 
-jest.useFakeTimers();
-jest.setSystemTime(1600000000000);
+beforeEach(() => {
+  jest.useFakeTimers();
+  jest.setSystemTime(1600000000000);
+});
